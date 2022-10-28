@@ -10,7 +10,7 @@ namespace Methods {
             double result1 = GetNumber();
             double result2 = GetNumber();
             int action1 = GetAction();
-            double result3 = DoAction(result1, result2, action1);
+            double result3 = DoAction(result1, result2, (double)action1);
 
             System.Console.WriteLine($"The result of your mathematical operation is {result3}.");
 
@@ -52,15 +52,15 @@ namespace Methods {
             }
         }
 
-        public static double DoAction(double x, double y, int oper) {
+        public static double DoAction(double x, double y, double z) {
             double result;
-            if (oper == 1) {
+            if (z == 1) {
                 result = x + y;
-            } else if (oper == 2) {
+            } else if (z == 2) {
                 result = x - y;
-            } else if (oper == 3) {
+            } else if (z == 3) {
                 result = x * y;
-            } else if (oper == 4) {
+            } else if (z == 4) {
                 result = x / y;
             } else {
                 throw new FormatException();
